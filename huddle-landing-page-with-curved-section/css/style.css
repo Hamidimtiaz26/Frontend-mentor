@@ -1,0 +1,435 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+}
+
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+button {
+  background-color: coral;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+:root {
+  /* heading */
+  --fw-700--ff: 700;
+  --ff-heading: 'Poppins', sans-serif;
+  /* body */
+  --fw-400: 400;
+  --fw-700: 700;
+  --ff-body: 'Open Sans', sans-serif;
+
+  /* primary-color */
+
+  --pink-100: hsl(322, 100%, 66%);
+  --light-pink: hsl(321, 100%, 78%);
+  --light-red: hsl(0, 100%, 63%);
+
+  /* Neurtal */
+
+  --pale-blue: hsl(207, 100%, 98%);
+  --dark-cyan-900: hsl(192, 100%, 9%);
+
+
+}
+
+body {
+  font-family: var(--ff-body);
+  font-weight: 400;
+  color:
+}
+
+main {
+  padding: 2rem 1rem;
+}
+
+.header-logo {
+  width: 40%;
+  max-width: 150px;
+  object-fit: contain;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Home */
+
+.home-main {
+  /* border: 1px solid red; */
+  margin: 6rem 0 3rem;
+  --margin-y: 1rem;
+  text-align: center;
+}
+
+.home-text {
+  /* border: 1px solid red; */
+  margin-bottom: 4rem;
+}
+
+.home-title {
+  font-size: 1.5rem;
+  padding: 0 1.2rem;
+  margin-bottom: var(--margin-y);
+  font-family: var(--ff-heading);
+  font-weight: var(--fw-700--ff);
+  color: var(--dark-cyan-900);
+}
+
+.home-intro {
+  padding: 0 1.2rem;
+  margin-bottom: var(--margin-y);
+}
+
+.home-text button {
+  margin-top: 1.5rem;
+}
+
+/* stats */
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.messages,
+.community {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.messages img,
+.community img {
+  max-width: 30px;
+
+}
+
+.bold-stats {
+  font-size: 2rem;
+  color: var(--dark-cyan-900);
+  font-weight: 900;
+  font-family: var(--ff-body);
+
+}
+
+.light-stats {
+  font-size: 10px;
+}
+
+/* card */
+
+.card-content {
+  padding: 4rem 2rem;
+  background-color: var(--pale-blue);
+
+}
+
+.card:not(:last-child) {
+  margin-bottom: 6rem;
+}
+
+.card-hero-img {
+  padding-bottom: 5rem;
+}
+
+.card-text {
+  text-align: center;
+}
+
+.card-title {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.card-intro {
+  font-size: 0.89rem;
+}
+
+
+/* community card */
+.community-card {
+  margin: 4rem 0;
+  text-align: center;
+}
+
+.community-card h2 {
+  margin-bottom: 2rem;
+}
+
+.community-card .btn-primary a {
+  padding: 0.5rem 2rem;
+}
+
+.footer-content {
+  padding: 4rem 2rem;
+  background-color: var(--dark-cyan-900);
+  color: #fff;
+}
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+}
+
+.newsletter h3 {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+.newsletter p {
+  font-size: 0.85rem;
+  padding: 1rem 0;
+}
+
+.footer-btn {
+  display: inline-block;
+  background-color: var(--pink-100);
+  padding: 0.5rem 1.3rem;
+  border-radius: 5px;
+  width: fit-content;
+  align-self: flex-end;
+}
+
+form input[type="text"] {
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 0.7rem;
+  padding: 0.4rem 0;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.contact-footer {
+  padding: 3rem 0;
+}
+
+.footer-logo {
+  filter: invert(1);
+  width: 40%;
+  max-width: 200px;
+}
+
+.contact-footer p {
+  font-size: 0.85rem;
+  padding: 1.2rem 0;
+}
+
+.flex-2 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+}
+
+.mail {
+  margin-top: -1.3rem;
+  margin-bottom: 1rem;
+}
+
+.social-media-icons i {
+  margin-right: 0.5em;
+}
+
+
+
+
+/* utilities */
+.btn-secondary a {
+  padding: 0.1rem 1rem;
+
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid var(--pink-100);
+  color: var(--light-pink);
+}
+
+.btn {
+  border-radius: 20px;
+}
+
+.btn-primary a {
+  padding: 0.4rem 3rem;
+}
+
+.btn-primary {
+  background-color: var(--pink-100);
+  color: #fff;
+  font-weight: var(--fw-700);
+
+}
+
+
+@media (min-width: 1000px) {
+  main {
+    padding: 3rem;
+  }
+
+  .home-title {
+    font-size: 2rem;
+  }
+
+  .home-intro {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .mockup-img {
+
+    margin: 0 auto;
+    max-width: 70%;
+  }
+
+  .stats {
+
+    flex-direction: row;
+    gap: 10rem;
+  }
+
+  .bold-stats {
+    font-size: 2.3rem;
+  }
+
+  .light-stats {
+    font-size: 1rem;
+  }
+
+  .card-content {
+    padding: 2em 1em;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: space-around;
+  }
+
+  .card-hero-img {
+    max-width: 40%;
+
+
+  }
+
+  .card-text {
+
+    flex-basis: 40%;
+    text-align: left;
+
+  }
+
+  .or-flex {
+    order: -1;
+  }
+
+  .card-title {
+    font-size: 1.7rem;
+  }
+
+  .card-intro {
+    font-size: 1.1rem;
+  }
+
+  .community-card {
+    margin: 7em 0;
+  }
+
+  .flex {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+
+  .footer-content {
+    padding-top: 2rem;
+  }
+
+  .contact-footer {
+    padding: 0;
+    order: -1;
+
+    flex-basis: 40%;
+  }
+
+  .newsletter {
+    flex-basis: 40%;
+  }
+}
